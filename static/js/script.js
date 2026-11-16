@@ -41,19 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  const form = document.getElementById("contactForm");
-  form?.addEventListener("submit", event => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const name = data.get("name");
-    const email = data.get("email");
-    const subject = data.get("subject") || "Portfolio enquiry";
-    const message = data.get("message");
-    const body = `Hi, I'm ${name} (${email}).%0D%0A%0D%0A${encodeURIComponent(message)}`;
-    // Replace this address with your own email address.
-    window.location.href = `mailto:hello@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    // document.getElementById("formNote").textContent = "Your email app should open with the message ready to send.";
-  });
 });
 
 
@@ -65,7 +52,7 @@ const submitBtn = document.getElementById("submitBtn");
 
 const formStatus = document.getElementById("formStatus");
 
-const API_URL = "http://127.0.0.1:8000/api/contact/";
+const API_URL = "api/contact/";
 
 
 contactForm.addEventListener("submit", async function (e) {
