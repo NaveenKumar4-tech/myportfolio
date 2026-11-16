@@ -126,7 +126,7 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
-        'contact': '5/hour',
+        'contact': '8/hour',
     }
 }
 

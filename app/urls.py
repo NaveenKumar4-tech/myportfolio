@@ -4,7 +4,7 @@ from .views import *
 urlpatterns = [
     path('',home),
     path(
-        'contact/',
+        'api/contact/',
         ContactAPIView.as_view(),
         name='contact'
     ),
